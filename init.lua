@@ -10,8 +10,10 @@ require("autocommands")
 -- mini
 -- snacks
 -- something for git (fugitive?)
+-- ai????
+-- notes
 -- trouble
---
 -- DAP
 -- linter
 -- formatter
+-- write down important keybinds somewhere
