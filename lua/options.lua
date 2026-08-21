@@ -1,14 +1,14 @@
-vim.opt.shiftwidth = 4
-vim.opt.showmode = false
-vim.opt.updatetime = 250
-vim.opt.scrolloff = 6
-vim.opt.cursorline = true
-vim.opt.wrap = false
-vim.opt.undofile = true
+vim.o.shiftwidth = 4
+vim.o.showmode = false
+vim.o.updatetime = 250
+vim.o.scrolloff = 6
+vim.o.cursorline = true
+vim.o.wrap = false
+vim.o.undofile = true
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+vim.o.splitright = true
+vim.o.splitbelow = true
 
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.signcolumn = "yes"
+vim.o.number = true
+vim.o.relativenumber = true
+vim.o.signcolumn = "yes"

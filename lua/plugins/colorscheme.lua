@@ -30,7 +30,7 @@ return {
   -- rose-pine
   {
     "rose-pine/neovim",
-    enabled = false,
+    enabled = true,
     name = "rose-pine",
     lazy = false,
     priority = 1000,
@@ -45,7 +45,7 @@ return {
   -- ashen
   {
     "ficcdaf/ashen.nvim",
-    enabled = true,
+    enabled = false,
     lazy = false,
     priority = 1000,
     config = function()

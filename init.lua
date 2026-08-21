@@ -4,6 +4,14 @@ require("keymaps")
 require("config.lazy")
 require("autocommands")
 
+vim.filetype.add({
+  extension = {
+    module = "php",
+    install = "php",
+    theme = "php",
+  }
+})
+
 -- TODO: look into more plugins to add
 -- cloak
 -- todo-comments

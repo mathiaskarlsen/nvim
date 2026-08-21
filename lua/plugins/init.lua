@@ -4,7 +4,6 @@ return {
   {
     "folke/lazydev.nvim",
     ft = "lua",
-    cmd = "LazyDev",
     opts = {
       library = {
         -- See the configuration section for more details
