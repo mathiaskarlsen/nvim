@@ -1,0 +1,45 @@
+Total: 31 plugins
+
+  Clean (2)
+    ○ ashen.nvim 
+    ○ catppuccin 
+
+  Loaded (21)
+    ● blink.cmp 23.65ms  start
+    ● friendly-snippets 0.55ms  blink.cmp
+    ● gitsigns.nvim 13.12ms  UiEnter
+    ● harpoon 10.9ms  start
+    ● lazy.nvim 22.9ms  init.lua
+    ● lazydev.nvim 1.94ms  lua
+    ● love2d.nvim 2.78ms  VeryLazy
+    ● lualine.nvim 22.6ms  start
+    ● mason-lspconfig.nvim 65.77ms  start
+    ● mason.nvim 10.88ms  mason-lspconfig.nvim
+    ● mini.icons 5.9ms  oil.nvim
+    ● nvim-lspconfig 5.8ms  mason-lspconfig.nvim
+    ● nvim-treesitter 18.84ms  start
+    ● nvim-web-devicons 1.29ms  lualine.nvim
+    ● oil.nvim 11.87ms  start
+    ● plenary.nvim 1.15ms  telescope.nvim
+    ● rose-pine 12.23ms  start
+    ● telescope-fzf-native.nvim 0.43ms  telescope.nvim
+    ● telescope.nvim 22.28ms  start
+    ● todo-comments.nvim 5.23ms  VimEnter
+    ● vim-sleuth 1.45ms  start
+
+  Not Loaded (3)
+    ○ trouble.nvim  <leader>cs  <leader>cl  <leader>xL  <leader>xQ  <leader>xx  <leader>xX  Trouble 
+    ○ undotree  <leader>u 
+    ○ vim-be-good  VimBeGood 
+
+  Disabled (5)
+    ○ ashen.nvim 
+    ○ catppuccin 
+    ○ indent-blankline.nvim 
+    ○ mini.nvim 
+    ○ tokyonight.nvim 
+
+
+Other plugins im considering:
+blink.pairs
+blink.indent
