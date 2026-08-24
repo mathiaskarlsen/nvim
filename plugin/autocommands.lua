@@ -1,14 +1,3 @@
--- local mathGroup = vim.api.nvim_create_augroup("mathGroup", {})
-
-
--- highlighting on yank (copy)
--- vim.api.nvim_create_autocmd("TextYankPost", {
---   desc = "Highlight when yanking (copying) text",
---   group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
---   callback = function()
---     vim.highlight.on_yank()
---   end,
--- })
 
 -- lsp formatting
 -- vim.api.nvim_create_autocmd('LspAttach', {
@@ -27,16 +16,38 @@
 --   end,
 -- })
 
+
 -- clipboard integration
--- vim.api.nvim_create_autocmd("UiEnter", {
---   group = mathGroup,
---   callback = function()
---     print("HEY")
---     vim.opt.clipboard = "unnamedplus"
---   end
--- })
 
 -- scheduled setting after `UiEnter` because it can increase startup-time
 -- vim.schedule(function()
 --   vim.opt.clipboard = "unnamedplus"
 -- end)
+
+
+-- Reminder to update plugins
+local stamp = vim.fn.stdpath("state") .. "/last-packcheck"
+local month = 30 * 24 * 60 * 60
+
+local function mark_checked()
+  vim.fn.writefile({ tostring(os.time()) }, stamp)
+end
+
+vim.api.nvim_create_user_command("PackUpdate", function()
+  vim.pack.update()
+  mark_checked()
+end, {})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local last
+
+    if vim.fn.filereadable(stamp) == 1 then
+      last = tonumber(vim.fn.readfile(stamp)[1])
+    end
+
+    if not last or os.time() - last >= month then
+      vim.notify("Plugins haven't been checked for updates in a month")
+    end
+  end,
+})
