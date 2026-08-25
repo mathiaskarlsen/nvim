@@ -27,7 +27,14 @@ local parsers = {
   "dockerfile",
 }
 
-require("nvim-treesitter").install(parsers)
+if vim.fn.executable("tree-sitter") == 1 then
+  require("nvim-treesitter").install(parsers)
+else
+  vim.notify(
+    "tree-sitter-cli is not installed; Tree-sitter parsers were not installed",
+    vim.log.levels.WARN
+  )
+end
 
 -- Enable Treesitter highlighting if parsers are installed.
 vim.api.nvim_create_autocmd("FileType", {
