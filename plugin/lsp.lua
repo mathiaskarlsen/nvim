@@ -15,7 +15,7 @@ require("lazydev").setup()
 require("mason").setup()
 
 -- Extension to mason.nvim that automatically installs and enables language servers.
--- Also provides some extra features such as the :LspInstall command
+-- Also provides some extra features such as the :LspInstall command.
 require("mason-lspconfig").setup({
     ensure_installed = {
       "lua_ls",

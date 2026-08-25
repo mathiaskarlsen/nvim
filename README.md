@@ -1,5 +1,7 @@
 # nvim
 
+My Neovim config. Updated for Neovim 0.12
+
 ## Requirements
 
 * Neovim >= 0.12

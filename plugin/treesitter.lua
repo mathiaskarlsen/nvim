@@ -29,6 +29,7 @@ local parsers = {
 
 require("nvim-treesitter").install(parsers)
 
+-- Enable Treesitter highlighting if parsers are installed.
 vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
