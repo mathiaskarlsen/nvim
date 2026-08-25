@@ -10,7 +10,9 @@ require('mini.surround').setup()
 require('mini.indentscope').setup()
 require('mini.git').setup()
 require('mini.notify').setup()
-
+require('mini.misc').setup()
+MiniMisc.setup_termbg_sync()
+require('mini.pairs').setup()
 require("mini.hipatterns").setup({
   highlighters = {
     todo = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo", },
